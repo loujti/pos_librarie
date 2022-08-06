@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model="ir.ui.view" id="product_tree_view">
+        <field name="name">product.template.product.tree</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_tree_view"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='list_price']" position="before">
+                        <field name="taxes_id" widget="many2many_tags"/>
+            </xpath>
+
+        </field>
+    </record>
+
+
+
+</odoo>
