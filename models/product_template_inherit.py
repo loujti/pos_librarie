@@ -10,7 +10,7 @@ class ProductTemplate(models.Model):
     _inherit = "product.template"
 
 
-    @api.onchange('list_price')
-    def _onchange_list_price(self):
-        if self.list_price:
-            self.list_price = self.list_price + self.taxes_id.amount
+    # @api.onchange('list_price')
+    # def _onchange_list_price(self):
+    #     if self.list_price:
+    #         self.list_price = self.list_price + self.taxes_id.amount
