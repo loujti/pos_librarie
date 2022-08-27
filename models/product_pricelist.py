@@ -27,7 +27,7 @@ class PricelistItem(models.Model):
                 item.name = _("Category: %s") % (item.categ_id.display_name)
             elif item.product_tmpl_id and item.applied_on == '1_product':
                 item.name = _("Product: %s") % (item.product_tmpl_id.display_name)
-            elif item.product_tmpl_id and item.applied_on == '4_pos_categroy_product':
+            elif item.pos_categ_id and item.applied_on == '4_pos_categroy_product':
                 item.name = _("POS Category: %s") % (item.pos_categ_id.name)
             elif item.product_id and item.applied_on == '0_product_variant':
                 item.name = _("Variant: %s") % (item.product_id.with_context(display_default_code=False).display_name)
