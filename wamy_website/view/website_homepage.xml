@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="wamy_slider_homepage"
+              inherit_id="website.homepage" name="Wamy Homepage">
+
+        <xpath expr="//div[@id='wrap']" position="replace">
+
+            <div id="wrap">
+
+
+                <section class="carousel" id="wamysliders" t-if="my_sliders" align="center">
+
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel"
+                         data-interval="5000">
+                        <ol class="carousel-indicators">
+                            <t t-set="i" t-value="0"/>
+                            <t t-foreach="my_sliders" t-as="shop_slider">
+                                <li t-attf-data-target="#myCarousel" t-att-data-slide-to="shop_slider.id"
+                                    t-att-class="'active' if i==0 else ''"/>
+                                <t t-set="i" t-value="i+1"/>
+                            </t>
+                        </ol>
+                        <div class="carousel-inner" role="listbox">
+                            <t t-set="i" t-value="0"/>
+                            <t t-foreach="my_sliders" t-as="shop_slider">
+                                <t t-set="image" t-value="website.image_url(shop_slider, 'image')"/>
+                                <div t-att-class="'carousel-item active' if i==0 else 'carousel-item '">
+                                    <a t-attf-href="#{shop_slider.url}" target="_blank">
+                                        <img t-attf-src="data:image/jpg;base64,{{ shop_slider.image }}" class="d-block w-100 " style="max-height:600px; width:100%;  margin: auto;"
+                                             role="option"/>
+                                            <div class="text-block">
+                                                    <div t-raw="shop_slider.name" style=" position: absolute; top: 50%; left: 50%;"/>
+                                            </div>
+                                    </a>
+
+                                 </div>
+
+
+                                <t t-set="i" t-value="i+1"/>
+                            </t>
+                            <t t-set="i" t-value="i+1"/>
+
+                        </div>
+                        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="false"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="false"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+
+                    </div>
+                </section>
+
+
+
+                <section id="partner_pictures" t-if="partner_pictures" >
+                    <!--Carousel Wrapper -->
+                    <div id="demo" class="carousel slide" data-ride="carousel">
+
+                        <!-- Indicators -->
+
+
+                        <!-- The slideshow -->
+                        <div class="col-md-12">
+                                <h2 class="text-center mt-5 mb-5">Our Partners</h2>
+                        </div>
+                        <div class="container carousel-inner no-padding">
+                            <t t-set="i" t-value="0"/>
+                            <t t-foreach="partner_pictures" t-as="picture">
+
+                                <div t-att-class="'active carousel-item' if i==0 else 'carousel-item'">
+                                    <div class="row">
+                                        <t t-foreach="picture" t-as="pic">
+                                            <div class=" col-xs-3 col-sm-3 col-md-3 picdiv">
+
+                                                <img
+                                                             t-if="pic.image_1920"
+                                                               t-att-src="image_data_uri(pic.image_1920)"
+                                                                class="personal-avatar profile-pic card bg-200 rounded-circle " style="max-height:200px; max-width:200px;"/>
+                                                 <t t-esc="pic.name"/>
+
+                                            </div>
+                                        </t>
+                                    </div>
+                                    <t t-set="i" t-value="i+1"/>
+
+                                </div>
+
+                            </t>
+                        </div>
+
+                        <!-- Left and right controls -->
+                        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                            <span class="carousel-control-next-icon"></span>
+
+                        </a>
+                        <a class="carousel-control-next" href="#demo" data-slide="next">
+                            <span class="carousel-control-prev-icon"></span>
+                        </a>
+                    </div>
+                    <br/>
+                    <br/>
+                </section>
+                <section id="wamy_statistics" t-if="my_statistics" >
+                <div id="statistics" class="carousel slide" data-ride="carousel">
+
+                            <div class="col-md-12">
+                                    <h2 class="text-center mt-5 mb-5 title">Statistics</h2>
+                            </div>
+                            <div class="container carousel-inner no-padding">
+                                <t t-set="i" t-value="0"/>
+                                  <t t-foreach="my_statistics" t-as="stat">
+                                    <div t-att-class="'active carousel-item' if i==0 else 'carousel-item'">
+                                        <div class="row">
+                                            <t t-foreach="stat" t-as="stats">
+
+                                                <div class=" col-xs-3 col-sm-3 col-md-3 statdiv" style="width: 100px; height: 200px;">
+
+                                                       <div t-attf-class="fa fa-2x rounded-circle bg-gamma m-3 #{stats.circle_background_color}"  style="color:black;">
+                                                           <span t-attf-class="#{stats.icon} "/>
+                                                           <h4><strong><t t-esc="stats.total_count"/></strong></h4>
+                                                           <h4 class="o_default_snippet_text" ><t t-esc="stats.title"/></h4>
+                                                       </div>
+                                                </div>
+
+                                                <t t-set="i" t-value="i+1"/>
+                                                 </t>
+                                            </div>
+                                            <t t-set="i" t-value="i+1"/>
+                                         </div>
+
+                                     </t>
+                            </div>
+                        <a class="carousel-control-prev" href="#statistics" data-slide="prev">
+                            <span class="carousel-control-next-icon"></span>
+
+                        </a>
+                        <a class="carousel-control-next" href="#statistics" data-slide="next">
+                            <span class="carousel-control-prev-icon"></span>
+                        </a>
+                    </div>
+                    <br/>
+                   <br/>
+                 </section>
+
+
+
+
+
+				</div>
+        </xpath>
+    </template>
+
+</odoo>

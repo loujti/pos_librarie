@@ -1,0 +1,493 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* wamy_website
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e-20201117\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-05 10:55+0000\n"
+"PO-Revision-Date: 2021-12-05 10:55+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: wamy_website
+#: model_terms:ir.ui.view,arch_db:wamy_website.wamy_slider_homepage
+msgid ""
+"<span class=\"carousel-control-next-icon\" aria-hidden=\"false\"/>\n"
+"                            <span class=\"sr-only\">Previous</span>"
+msgstr ""
+
+#. module: wamy_website
+#: model_terms:ir.ui.view,arch_db:wamy_website.wamy_slider_homepage
+msgid ""
+"<span class=\"carousel-control-prev-icon\" aria-hidden=\"false\"/>\n"
+"                            <span class=\"sr-only\">Next</span>"
+msgstr ""
+
+#. module: wamy_website
+#: model_terms:ir.ui.view,arch_db:wamy_website.schoolarship
+msgid "Amount Required Per Year:"
+msgstr "المبلغ المطلوب سنويا:"
+
+#. module: wamy_website
+#: model_terms:ir.ui.view,arch_db:wamy_website.conditions
+#: model_terms:ir.ui.view,arch_db:wamy_website.detail
+msgid "Apply Now!"
+msgstr "قدم الآن!"
+
+#. module: wamy_website
+#: model_terms:ir.ui.view,arch_db:wamy_website.apply
+msgid "Apply Schoolarship"
+msgstr ""
+
+
+
+#. module: wamy_website
+#: model_terms:ir.ui.view,arch_db:wamy_website.apply
+msgid "Choose..."
+msgstr ""
+
+#. module: wamy_website
+#: model_terms:ir.ui.view,arch_db:wamy_website.conditions
+msgid "Conditions:"
+msgstr "شروط القبول:"
+
+#. module: wamy_website
+#: model:ir.model.fields,field_description:wamy_website.field_wamy_website_sliders__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: wamy_website
+#: model:ir.model.fields,field_description:wamy_website.field_wamy_website_sliders__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: wamy_website
+#: model:ir.model.fields,field_description:wamy_website.field_wamy_website_sliders__description
+#: model_terms:ir.ui.view,arch_db:wamy_website.apply
+msgid "Description"
+msgstr "الوصف"
+
+#. module: wamy_website
+#: model_terms:ir.ui.view,arch_db:wamy_website.schoolarship
+msgid "Detail"
+msgstr "التفاصيل"
+
+#. module: wamy_website
+#: model_terms:ir.ui.view,arch_db:wamy_website.detail
+msgid "Details:"
+msgstr "التفاصيل:"
+
+#. module: wamy_website
+#: model:ir.model.fields,field_description:wamy_website.field_ir_ui_view__display_name
+#: model:ir.model.fields,field_description:wamy_website.field_wamy_website_sliders__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+
+#. module: wamy_website
+#: model:ir.model.fields,field_description:wamy_website.field_wamy_website_sliders__image
+msgid "Image"
+msgstr "صورة"
+
+#. module: wamy_website
+#: model_terms:ir.ui.view,arch_db:wamy_website.schoolarship
+msgid "Last Date Register:"
+msgstr "آخر تاريخ للتسجيل:"
+
+#. module: wamy_website
+#: model:ir.model.fields,field_description:wamy_website.field_ir_ui_view____last_update
+#: model:ir.model.fields,field_description:wamy_website.field_wamy_website_sliders____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: wamy_website
+#: model:ir.model.fields,field_description:wamy_website.field_wamy_website_sliders__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: wamy_website
+#: model:ir.model.fields,field_description:wamy_website.field_wamy_website_sliders__write_date
+msgid "Last Updated on"
+msgstr ""
+
+
+#. module: wamy_website
+#: model_terms:ir.ui.view,arch_db:wamy_website.wamy_slider_homepage
+msgid "Our Partners"
+msgstr ""
+
+#. module: wamy_website
+#: model_terms:ir.ui.view,arch_db:wamy_website.schoolarship
+msgid "Scholarship Start Date:"
+msgstr "تاريخ بداية المنحة:"
+
+#. module: wamy_website
+#: model_terms:ir.ui.view,arch_db:wamy_website.apply
+msgid "Schoolarship Registration"
+msgstr ""
+
+
+
+
+#. module: wamy_website
+#: model:ir.actions.act_window,name:wamy_website.slider_website_view
+#: model:ir.ui.menu,name:wamy_website.slider_website_slider
+msgid "Sliders"
+msgstr ""
+
+#. module: wamy_website
+#: code:addons/wamy_website/controllers/student_schoolarship.py:0
+#, python-format
+msgid "Some Thing Wrong!"
+msgstr " هناك خطأ ما!"
+
+#. module: wamy_website
+#: model:website.menu,name:wamy_website.menu_wamy_schoolarship
+#: model_terms:ir.ui.view,arch_db:wamy_website.aplly
+#: model_terms:ir.ui.view,arch_db:wamy_website.conditions
+#: model_terms:ir.ui.view,arch_db:wamy_website.detail
+msgid "Student Schoolarship"
+msgstr "المنح الطلابية"
+
+#. module: wamy_website
+#: model_terms:ir.ui.view,arch_db:wamy_website.aplly
+#: model_terms:ir.ui.view,arch_db:wamy_website.conditions
+msgid "Student Schoolarship Detail"
+msgstr "تفاصيل المنحة الطلابية"
+
+
+
+
+#. module: wamy_website
+#: model_terms:ir.ui.view,arch_db:wamy_website.conditions
+msgid "The number of students expected to be awarded:"
+msgstr "عدد الطلبة المتوقع منحهم:"
+
+
+
+
+#. module: wamy_website
+#: model:ir.model,name:wamy_website.model_ir_ui_view
+msgid "View"
+msgstr "أداة العرض"
+
+#. module: wamy_website
+#: model:ir.ui.menu,name:wamy_website.slider_website
+msgid "Wamy Website"
+msgstr "موقع الندوة  "
+
+#. module: wamy_website
+#: model:ir.model,name:wamy_website.model_wamy_website_sliders
+msgid "Wamy Website Slider"
+msgstr ""
+
+#. module: wamy_website
+#: code:addons/wamy_website/controllers/student_schoolarship.py:0
+#, python-format
+msgid "You cannot apply for this scholarship!"
+msgstr "لا يمكنك التقدم لهذه المنحة!"
+
+#. module: wamy_website
+#: code:addons/wamy_website/controllers/student_schoolarship.py:0
+#, python-format
+msgid "Your request has been sent now"
+msgstr "تم إرسال طلبك الآن"
+
+#. module: wamy_website
+#: model_terms:ir.ui.view,arch_db:wamy_website.apply
+msgid "aa@aa.com"
+msgstr ""
+
+#. module: wamy_website
+#: model_terms:ir.ui.view,arch_db:wamy_website.conditions
+#: model_terms:ir.ui.view,arch_db:wamy_website.detail
+msgid "breadcrumb"
+msgstr ""
+
+
+
+
+#. module: wamy_website
+#: model_terms:ir.ui.view,arch_db:wamy_website.aplly
+msgid "phone"
+msgstr "رقم الهاتف"
+
+#. module: wamy_website
+#: model_terms:ir.ui.view,arch_db:wamy_website.aplly
+msgid "Student Schoolarship Conditions"
+msgstr "شروط القبول المنحة الطلابية"
+
+
+#. module: wamy_website
+#: model_terms:ir.ui.view,arch_db:wamy_website.aplly
+msgid "Schoolarship Registration"
+msgstr "تسجيل في  المنحة الدراسية"
+
+#. module: wamy_website
+#: model_terms:ir.ui.view,arch_db:wamy_website.aplly
+msgid "University"
+msgstr "الجامعة"
+
+
+#. module: wamy_website
+#: model_terms:ir.ui.view,arch_db:wamy_website.aplly
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+#. module: wamy_website
+#: model_terms:ir.ui.view,arch_db:wamy_website.aplly
+msgid "Choose..."
+msgstr "إختار..."
+
+#. module: wamy_website
+#: model_terms:ir.ui.view,arch_db:wamy_website.aplly
+msgid "Schoolarship Type"
+msgstr "نوع المنحة"
+
+
+
+#. module: wamy_website
+#: model_terms:ir.ui.view,arch_db:wamy_website.aplly
+msgid "Send"
+msgstr "إرسال"
+
+
+
+#. module: wamy_website
+#: model_terms:ir.ui.view,arch_db:wamy_website.aplly
+msgid "Cancel"
+msgstr "إغلاق"
+
+
+
+#. module: wamy_website
+#: model_terms:ir.ui.view,arch_db:wamy_website.conditions
+msgid "Number Of Scholarship Years:"
+msgstr "عدد سنوات المنحة:"
+
+
+
+#. module: wamy_website
+#: model:ir.model.fields,field_description:wamy_website.field_wamy_website_sliders__name
+#: model:ir.model.fields,field_description:wamy_website.field_wamy_website_statistics__name
+#: model_terms:ir.ui.view,arch_db:wamy_website.aplly
+msgid "Name"
+msgstr "الإسم"
+
+
+#. module: wamy_website
+#: model_terms:ir.ui.view,arch_db:wamy_website.detail
+msgid "Conditions Scholarship"
+msgstr "شروط المنحة"
+
+#. module: wamy_website
+#: code:addons/wamy_website/controllers/student_schoolarship.py:0
+#, python-format
+msgid ""
+"You cannot apply for this scholarship, The last date for registration has "
+"expired!"
+msgstr ""
+"لا يمكنك التقدم لهذه المنحة, التاريخ الأخير للتسجيل "
+"إنتهى!"
+
+#. module: wamy_website
+#: model:website.menu,name:wamy_website.menu_wamy_about_wamy
+msgid "About Wamy"
+msgstr "عن الندوة"
+
+#. module: wamy_website
+#: model:ir.model.fields,field_description:wamy_website.field_wamy_website_statistics__filter_domain
+msgid "Apply on"
+msgstr "تقدم على"
+
+#. module: wamy_website
+#: model:ir.model.fields,field_description:wamy_website.field_wamy_website_statistics__circle_background_color
+msgid "Color of Circle"
+msgstr "لون الدائرة"
+
+#. module: wamy_website
+#: model:website.menu,name:wamy_website.menu_wamy_donate_now
+msgid "Donate now"
+msgstr "تبرع الآن"
+
+#. module: wamy_website
+#: model:ir.model.fields,help:wamy_website.field_wamy_website_statistics__icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "رمز الخط e.g. fa-tasks"
+
+#. module: wamy_website
+#: model:ir.model.fields,field_description:wamy_website.field_ir_ui_view__id
+#: model:ir.model.fields,field_description:wamy_website.field_wamy_website_sliders__id
+#: model:ir.model.fields,field_description:wamy_website.field_wamy_website_statistics__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: wamy_website
+#: model:ir.model.fields,field_description:wamy_website.field_wamy_website_statistics__icon
+msgid "Icon"
+msgstr "أيقونة"
+
+
+#. module: wamy_website
+#: model:ir.model.fields,help:wamy_website.field_wamy_website_statistics__filter_domain
+msgid ""
+"If present, this condition must be satisfied before executing the action "
+"rule."
+msgstr ""
+
+#. module: wamy_website
+#: model:website.menu,name:wamy_website.menu_wamy_media_center
+msgid "Media Center"
+msgstr "المركز الاعلامي"
+
+#. module: wamy_website
+#: model:ir.model.fields,field_description:wamy_website.field_wamy_website_statistics__model_id
+msgid "Model"
+msgstr "نموذج"
+
+#. module: wamy_website
+#: model:ir.model.fields,field_description:wamy_website.field_wamy_website_statistics__model_name
+msgid "Model Name"
+msgstr "اسم النموذج"
+
+#. module: wamy_website
+#: model:ir.actions.act_window,name:wamy_website.slider_website_view
+#: model:ir.ui.menu,name:wamy_website.slider_website_slider
+msgid "Sliders"
+msgstr "الشرائح"
+
+#. module: wamy_website
+#: model:ir.actions.act_window,name:wamy_website.statistics_website_view
+#: model:ir.ui.menu,name:wamy_website.wamy_website_statistics
+#: model_terms:ir.ui.view,arch_db:wamy_website.wamy_slider_homepage
+msgid "Statistics"
+msgstr "إحصائيات"
+
+#. module: wamy_website
+#: model:ir.model.fields,field_description:wamy_website.field_wamy_website_statistics__total_count
+msgid "Total Count"
+msgstr "العدد الإجمالي"
+
+#. module: wamy_website
+#: model:ir.model.fields,field_description:wamy_website.field_wamy_website_sliders__url
+msgid "URL Address"
+msgstr "الرابط"
+
+#. module: wamy_website
+#: model:ir.model.fields,field_description:wamy_website.field_wamy_website_statistics__title
+msgid "Title"
+msgstr "عنوان"
+
+
+
+
+
+
+#. module: wamy_website
+#: model_terms:ir.ui.view,arch_db:wamy_website.aplly
+msgid "nationality"
+msgstr "الجنسية"
+
+#. module: wamy_website
+#: model_terms:ir.ui.view,arch_db:wamy_website.aplly
+msgid "Social Situation"
+msgstr "الحالة الإجتماعية"
+
+#. module: wamy_website
+#: model_terms:ir.ui.view,arch_db:wamy_website.aplly
+msgid "Married"
+msgstr "متزوج(ة)"
+
+#. module: wamy_website
+#: model_terms:ir.ui.view,arch_db:wamy_website.aplly
+msgid "Single"
+msgstr "أعزب(ة)"
+
+
+#. module: wamy_website
+#: model_terms:ir.ui.view,arch_db:wamy_website.aplly
+msgid "Widower"
+msgstr "أرمل(ة)"
+
+#. module: wamy_website
+#: model_terms:ir.ui.view,arch_db:wamy_website.aplly
+msgid "Divorced"
+msgstr "مطلق(ة)"
+
+#. module: wamy_website
+#: model_terms:ir.ui.view,arch_db:wamy_website.aplly
+msgid "Country..."
+msgstr "الدولة..."
+
+
+#. module: wamy_website
+#: model_terms:ir.ui.view,arch_db:wamy_website.frontend_layout
+msgid "<b>Student Schoolarship</b>"
+msgstr "<b>المنح الطلابية</b>"
+
+
+
+#. module: wamy_website
+#: model_terms:ir.ui.view,arch_db:wamy_website.frontend_layout
+msgid "<b>Institution Registration</b>"
+msgstr "<b>تسجيل المؤسسات التعليمية</b>"
+
+
+#. module: wamy_website
+#: model:website.menu,name:wamy_website.menu_wamy_institution
+msgid "Institution Registration"
+msgstr "تسجيل المؤسسات التعليمية"
+
+
+
+
+#. module: wamy_website
+#: model_terms:ir.ui.view,arch_db:wamy_website.aplly
+msgid "Invalid Email! Please enter a valid email."
+msgstr "الرجاء إدخال البريد الإلكتروني صحيح!"
+
+#. module: wamy_website
+#: model_terms:ir.ui.view,arch_db:wamy_website.aplly
+msgid "Invalid phone number( only numbers)."
+msgstr "الرجاء إدخال رقم هاتف صحيح( أرقام فقط)!"
+
+
+
+#. module: wamy_website
+#: model_terms:ir.ui.view,arch_db:wamy_website.schoolarship
+msgid "The most important scholarships currently available."
+msgstr ".اهم المنح الدراسية المتوفرة حاليا "
+
+
+
+#. module: wamy_website
+#: code:addons/wamy_website/models/website_slider.py:0
+#, python-format
+msgid "Invalid Url"
+msgstr "الرابط  غير صحيح!"
+
+
+
+#. module: wamy_website
+#: model_terms:ir.ui.view,arch_db:wamy_website.frontend_layout_inherit
+msgid "<b>Student Schoolarship</b>"
+msgstr "<b>المنح الطلابية</b>"
+
+
+
+#. module: wamy_website
+#: model_terms:ir.ui.view,arch_db:wamy_website.schoolarship
+msgid "There are no scholarships published by Wamy at the moment."
+msgstr " لا يوجد منح منشورة من قبل الندوة حاليا."
+
+
+
+
+
+

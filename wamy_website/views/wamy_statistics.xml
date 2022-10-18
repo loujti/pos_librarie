@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+          <record model="ir.ui.view" id="statistics_list_view_website">
+            <field name="name">Wamy website Statistics List</field>
+
+            <field name="model">wamy.website.statistics</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="title"/>
+                    <field name="icon"/>
+                    <field name="circle_background_color"/>
+                    <field name="model_id"  invisible="1"/>
+                    <field name="model_name" invisible="1"/>
+                    <field name="total_count"/>
+                </tree>
+            </field>
+        </record>
+           <record model="ir.ui.view" id="statistics_form_view_website">
+            <field name="name">Wamy website statistics form</field>
+
+            <field name="model">wamy.website.statistics</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                             <field name="name"/>
+                             <field name="title"/>
+                             <field name="icon"/>
+                            <field name="circle_background_color"/>
+                            <field name="model_id"/>
+                            <field name="filter_domain"  widget="domain" options="{'model': 'model_name', 'in_dialog': True}"/>
+                            <field name="total_count"/>
+                            <field name="model_name"  invisible="1"/>
+
+                        </group>
+                    </sheet>
+
+                </form>
+            </field>
+        </record>
+        <record id="statistics_website_view" model="ir.actions.act_window">
+            <field name="name">Statistics</field>
+            <field name="res_model">wamy.website.statistics</field>
+            <field name="view_mode">tree,form</field>
+
+        </record>
+       <menuitem id="wamy_website_statistics" parent="wamy_website.slider_website" name="Statistics" action="statistics_website_view"/>
+        <menuitem name="Website"
+            id="website.menu_website_configuration"
+            sequence="9"
+            groups="base.group_user"
+            web_icon="wamy_website,static/description/icon.png"/>
+    </data>
+</odoo>

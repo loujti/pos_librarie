@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_wamy_website_designer,wamy_website_designer,wamy_website.model_wamy_website_sliders,website.group_website_designer,1,1,1,0
+access_wamy_website_user,wamy_website_user,wamy_website.model_wamy_website_sliders,base.group_user,1,0,0,0
+access_wamy_website_all,wamy_website_all,wamy_website.model_wamy_website_sliders,,1,0,0,0
+access_wamy_website_stat_all,wamy_website_stat_all,wamy_website.model_wamy_website_statistics,,1,0,0,0
+access_wamy_website_stat_designer,wamy_website_stat_designer,wamy_website.model_wamy_website_statistics,website.group_website_designer,1,1,1,0
+

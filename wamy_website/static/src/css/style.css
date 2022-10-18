@@ -1,0 +1,36 @@
+@font-face {
+  font-family: 'Cairo Bold';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/wamy_website/static/fonts/Cairo-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Cairo Regular';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/wamy_website/static/fonts/Cairo-Regular.ttf') format('truetype');
+}
+
+body {
+    font-family:'Cairo_Regular', sans-serif !important;
+    
+}
+
+label {
+    font-family:'Cairo Bold', sans-serif !important;
+    font-weight: 700;
+    
+}
+
+h1 {
+    font-family:'Cairo Bold', sans-serif !important;
+    
+}
+p {
+    font-family:'Cairo Regular', sans-serif !important;
+   
+   
+}
+
+

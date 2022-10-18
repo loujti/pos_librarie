@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data >
+
+        <record id="menu_wamy_about_wamy" model="website.menu">
+         <field name="name">About Librairie</field>
+         <field name="url">/aboutwamy</field>
+         <field name="parent_id" ref="website.main_menu"/>
+        <field name="sequence" type="int">80</field>
+     </record>
+<!--    <record id="menu_wamy_donate_now" model="website.menu">-->
+<!--         <field name="name">Donate now</field>-->
+<!--         <field name="url">/shop</field>-->
+<!--         <field name="parent_id" ref="website.main_menu"/>-->
+<!--         <field name="sequence" type="int">20</field>-->
+<!--     </record>-->
+<!--     <record id="menu_wamy_media_center" model="website.menu">-->
+<!--         <field name="name">Media Center</field>-->
+<!--         <field name="url">/Media</field>-->
+<!--         <field name="parent_id" ref="website.main_menu"/>-->
+<!--         <field name="sequence" type="int">82</field>-->
+<!--     </record>-->
+    
+    <record id="menu_wamy_institution" model="website.menu">
+         <field name="name">Institution Registration</field>
+         <field name="url">/institution/new</field>
+         <field name="parent_id" ref="website.main_menu"/>
+         <field name="sequence" type="int">90</field>
+     </record>
+    
+     
+      </data>
+    
+
+
+</odoo>

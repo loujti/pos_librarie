@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	
+	<template id="main_layout_student" inherit_id="website.template_header_default">
+     <xpath expr="//div[@id='top_menu_collapse']/t/t[@t-as='submenu']" position="after">
+		<li t-if="is_published" class="nav-item">
+			<a href="/student_schoolarship" class="nav-link">
+			<b>Student Schoolarship</b>
+			</a>
+		</li>
+	</xpath>
+</template>
+	
+	
+	
+	
+	
+  
+	<template id="schoolarship" >
+		<t t-call="website.layout">
+			<div id="wrap" class="o_website_schoolarship_list bg-100">
+				<div class="oe_structure">
+					<section class="pt48 pb32 bg-200">
+						<div class="container">
+						<t t-if=" not schoolarship_educational">
+					       <div class="col-lg-12 text-center">
+									<h1 class="h1 text-secondary">There are no scholarships published by Wamy at the moment.
+									</h1>
+								</div>
+				          </t>
+				          <t t-if="schoolarship_educational">
+							<div class="row">
+								<div class="col-lg-12 text-center">
+									<h1 class="h1 text-secondary">The most important scholarships currently available.
+									</h1>
+								</div>
+							</div>
+							</t>
+						</div>
+						
+					</section>
+				</div>
+
+				<div class="container">
+					<div class="row justify-content-center pt48 pb48">
+						<t t-foreach="schoolarship_educational" t-as="schoolarship">
+							<div class="card mx-2 my-2 col-lg-3 col-sm-6 col-xs-12 col-md-6">
+								<a t-attf-href="/student_schoolarship/detail/#{ slug(schoolarship) }">
+									<div class="card-body" >
+										<div class="avatar-wrapper ">
+											<img t-if="schoolarship.image_128"
+												t-att-src="image_data_uri(schoolarship.image_128)"
+												class="personal-avatar profile-pic" />
+											<img t-if="not schoolarship.image_128"
+												src="/wamy_educational_portal/static/src/img/institutions.png"
+												class="personal-avatar profile-pic" />
+
+										</div>
+										<hr />
+										<div class="d-flex justify-content-center"
+											style="min-height: 100px; font-family:'CairoBold' !important ; font-weight: bold">
+											<h3 class="text-secondary mt0 mb4">
+												<span t-field="schoolarship.university_id" />
+												-
+												<span t-field="schoolarship.university_id.country_id" />
+											</h3>
+
+										</div>
+										<div class="text-align-left" style="min-height: 10px;">
+											<div class="text-center pb48">
+												<h2>
+													<a role="button"
+														t-attf-href="/student_schoolarship/detail/#{schoolarship.id}"
+														class="btn-ajout ajout">Detail</a>
+												</h2>
+												<!-- class="btn btn-primary btn-lg" -->
+											</div>
+											<span
+												style="text-align:center; font-family:'Cairo Bold' !important ; font-weight: bold">
+												Amount Required Per Year:
+												<span t-field="schoolarship.amount_required_year" />
+											</span>
+
+											<br />
+											<br />
+											<span
+												style="text-align:center; font-family:'Cairo Bold' !important ; font-weight: bold">
+												Scholarship Start Date:
+												<span t-field="schoolarship.Scholarship_start_date" />
+											</span>
+										</div>
+										<hr />
+										<div class="d-flex justify-content-center"
+											style="min-height: 10px;">
+											<br />
+											<br />
+											<div class="text-center pt38">
+												<h6>
+													<span
+														style="font-family:'Cairo Regular'font-weight: Regular; !important;">
+														Last Date Register:
+														<span t-field="schoolarship.last_date_register" />
+													</span>
+												</h6>
+											</div>
+										</div>
+									</div>
+								</a>
+							</div>
+						</t>
+					</div>
+				</div>
+
+			</div>
+
+		</t>
+	</template>
+
+
+	<template id="detail" name="Student Schoolarship" track="1">
+		<t t-call="website.layout">
+			<t t-set="additional_title">Student Schoolarship</t>
+			<div id="wrap" >
+				<section class="bg-200">
+					<div class="container">
+						<nav aria-label="breadcrumb">
+							<ol class="breadcrumb pl-0">
+								<li class="breadcrumb-item">
+									<a href="/student_schoolarship"
+										class="text-secondary font-weight-bold">Student Schoolarship</a>
+								</li>
+								<li class="breadcrumb-item active" aria-current="page">
+									<span t-field="schoolarship.name" />
+								</li>
+							</ol>
+						</nav>
+					</div>
+				</section>
+				<div class="container" style="background-color: white; padding-right: 15px;padding-left: 15px;">
+					<section class="pb32">
+						<div class="mt32">
+							<!-- <div class="float-right"> <a role="button" t-attf-href="/schoolarship/apply/#{schoolarship.id}" 
+								class="btn btn-primary btn-lg float-right">Apply Now!</a> </div> -->
+							<h1 t-field="schoolarship.scholarship_type_id" />
+
+							<h5 class="text-secondary mt0 mb4">
+								<span t-field="schoolarship.university_id" />
+								-
+								<span t-field="schoolarship.university_id.country_id" />
+							</h5>
+
+						</div>
+
+					</section>
+					<div>
+						<span>
+
+							<h3
+								style="font-family:'CairoBold' !important ; font-weight: bold"> Details:</h3>
+							<span
+								style="font-family:'CairoRegular'font-weight: Regular; !important;"
+								t-field="schoolarship.details" />
+						</span>
+					</div>
+					<div >
+						<section class=" mt32 mb32">
+							<div class="text-center">
+								<a role="button"
+									t-attf-href="/schoolarship/conditions/#{schoolarship.id}"
+									class="btn btn-primary sign_up_partner">Conditions Scholarship</a>
+							</div>
+							<div t-if="error" class="alert alert-danger mt-2 text-center"
+								role="alert">
+								<t t-esc="error" />
+							</div>
+						</section>
+					</div>
+					<br />
+					<br />
+				</div>
+			</div>
+		</t>
+	</template>
+
+
+	<template id="conditions" name="Student Schoolarship" track="1">
+		<t t-call="website.layout">
+			<t t-set="additional_title">Student Schoolarship</t>
+			<div id="wrap" class="justify-content-start ">
+				<section class="bg-200">
+					<div class="container">
+						<nav aria-label="breadcrumb">
+							<ol class="breadcrumb pl-0">
+								<li class="breadcrumb-item">
+									<a href="/student_schoolarship"
+										class="text-secondary font-weight-bold">Student Schoolarship</a>
+								</li>
+								<li class="breadcrumb-item">
+									<a	t-attf-href="/student_schoolarship/detail/#{schoolarship.id}"
+										class="text-secondary font-weight-bold">Student Schoolarship Detail </a>
+								</li>
+								<li class="breadcrumb-item active" aria-current="page">
+									<span t-field="schoolarship.name" />
+								</li>
+							</ol>
+						</nav>
+					</div>
+				</section>
+				<div class="container" style="background-color: white; padding-right: 15px;padding-left: 15px;">
+					<section class="pb32">
+						<div class="mt32">
+
+							<h1 t-field="schoolarship.scholarship_type_id" />
+
+							<h5 class="text-secondary mt0 mb4">
+								<span t-field="schoolarship.university_id" />
+								-
+								<span t-field="schoolarship.university_id.country_id" />
+							</h5>
+
+						</div>
+
+					</section>
+					<div>
+						<span>
+							<h5 style="font-family:'Cairo Bold' !important ; font-weight: bold"> Conditions:</h5>
+							<span
+								style="font-family:'CairoRegular' font-weight: Regular; !important;"
+								t-field="schoolarship.conditions" />
+						</span>
+
+					</div>
+
+					<div>
+						<span>
+							<h5 style="font-family:'Cairo Bold' !important ; font-weight: bold"> The number of students expected to be awarded:</h5>
+							<span t-field="schoolarship.no_of_recruitment" />
+						</span>
+
+					</div>
+					<div>
+						<span>
+							<h5 style="font-family:'Cairo Bold' !important ; font-weight: bold"> Number Of Scholarship Years:</h5>
+							<span t-field="schoolarship.nbr_Scholarship_years" />
+						</span>
+
+					</div>
+					<div >
+						<section class="mt32 mb32">
+							<div class="text-center">
+								<a role="button"
+									t-attf-href="/schoolarship/apply/#{schoolarship.id}"
+									class="btn btn-primary sign_up_partner">Apply Now!</a>
+									<div t-if="error" class="alert alert-danger mt-2 text-center" role="alert">
+								<t t-esc="error" />
+							</div>
+							</div>
+						</section>
+					</div>
+					<br />
+					<br />
+				</div>
+			</div>
+		</t>
+	</template>
+
+
+	
+	
+	<template id="aplly" >
+		<t t-call="website.layout">
+		<t t-set="additional_title">Apply Schoolarship</t>
+			<section class="bg-200">
+					<div class="container">
+						<nav aria-label="breadcrumb">
+							<ol class="breadcrumb pl-0">
+								<li class="breadcrumb-item">
+									<a href="/student_schoolarship"
+										class="text-secondary font-weight-bold">Student Schoolarship</a>
+								</li>
+								<li class="breadcrumb-item">
+									<a	t-attf-href="/student_schoolarship/detail/#{schoolarship.id}"
+										class="text-secondary font-weight-bold">Student Schoolarship Detail </a>
+								</li>
+								<li class="breadcrumb-item">
+									<a	t-attf-href="/schoolarship/conditions/#{schoolarship.id}"
+										class="text-secondary font-weight-bold">Student Schoolarship Conditions </a>
+								</li>
+								<li class="breadcrumb-item active" aria-current="page">
+									<span t-field="schoolarship.name" />
+								</li>
+							</ol>
+						</nav>
+					</div>
+				</section>
+		<div class="container schoolarship" style="background-color: white;">
+		
+			<form class="form-horizontal" role="form"
+				 action="/create/student_schoolarship" method="POST" enctype="multipart/form-data">
+				<input type="hidden" name="csrf_token"
+					t-att-value="request.csrf_token()" />
+					<input type="hidden" name="scholarship_id"
+					t-att-value="scholarship_id.id" />
+				<main class="modal-body">
+					<section id="forms" class="col-12">
+						<br />
+						<center>
+							<h2>Schoolarship  Registration</h2>
+						</center>
+						<br />
+						<div class="row">
+ 							<div class="form-group col-12">
+ 								<label>Name</label>  
+ 								<input type="text" name="name" 
+ 									class="form-control o_required_input" required="1" 
+ 									oninvalid="this.setCustomValidity('يرجى ملء هذا الحقل ')" 
+									oninput="this.setCustomValidity('')" /> 
+								</div>
+								</div>
+								<div class="row"> 
+						 <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="col-form-label" for="social_situation">Social Situation
+                                    </label>
+                                    <select name="social_situation" class="form-control">
+
+                                        <option value=""></option>
+                                        <option value="single" >
+                                            Single
+                                        </option>
+                                        <option value="married">
+                                            Married
+                                        </option>
+                                        <option value="widower" >
+                                            Widower
+                                        </option>
+                                        <option value="divorced">
+                                            Divorced
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+									<div class="form-group col-md-6">
+									<label>nationality</label>
+									 <select name="nationality_id" class="form-control">
+                                                <option value="">Country...</option>
+                                                <t t-foreach="country_ids or []" t-as="country">
+                                                    <option t-att-value="country.id">
+                                                        <t t-esc="country.name"/>
+                                                    </option>
+                                                </t>
+                                            </select>
+											</div>
+								
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+									<div class="form-group">
+										<label>phone</label>
+										<input type="tel" name="phone"
+											oninvalid="this.setCustomValidity('يرجى التثبت  من هذا الحقل ')"
+											oninput="this.setCustomValidity('')"
+											onkeypress="return onlyNumberKey(event)"
+											placeholder="xxxxxxxx" class="form-control phone_student"
+											value="" />
+										 <div class="error" id="errormobile" style="color:#db2c00;display:none;"> 
+											Invalid phone number( only numbers). </div> 
+
+									</div>
+								</div>
+						
+								<div class="form-group col-6 ">
+									<label>Email</label>
+									<input type="email" name="email" placeholder="aa@aa.com" 
+										oninvalid="this.setCustomValidity('يرجى التثبت  من هذا الحقل ')"
+										oninput="this.setCustomValidity('')"
+										class="form-control " value="" />
+									<div class="error" id="errormail"
+										style="color:#db2c00;display:none;">
+										Invalid Email! Please enter a valid email.
+									</div>
+								</div>
+								<script>
+									function onlyNumberKey(evt) {
+									var ASCIICode = (evt.which) ? evt.which : evt.keyCode
+									if (ASCIICode &gt; 31 &amp;&amp; (ASCIICode &lt; 48 || ASCIICode
+									&gt; 57))
+									return false;
+									return true;
+									}
+
+								</script>
+								</div>
+					</section>
+				</main>
+				<center>
+					<footer class="modal-footer" >
+						<button type="submit" class="btn btn-primary "
+							id="submitForm">Send</button>
+							<a href="/student_schoolarship" class="btn btn-dark" type="button">Cancel</a>
+
+					</footer>
+				</center>
+			</form>
+			</div>
+		</t>
+	</template>
+	
+	
+
+
+</odoo>
